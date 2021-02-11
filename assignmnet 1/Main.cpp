@@ -27,15 +27,18 @@ int main()
 		{
 			StudentList[i] = new NonGamingStudent(nameArr[(0 + rand() % 20)], (16 + rand() % 40), collegeArr[(0 + rand() % 10)] , programArr[(0 + rand() % 10)], (1 + rand() % 12), streamingArr[(0 + rand() % 4)] , (0 + rand() % 40));
 			++nonGamaing;
+			// uncomment to debug
+			//StudentList[i]->displayInfo();
 		}
 		else
 		{
 			StudentList[i] = new GamingStudent(nameArr[(0 + rand() % 20)], (16 + rand() % 40), collegeArr[(0 + rand() % 10)], programArr[(0 + rand() % 10)], (1 + rand() % 12), deviceArr[(0 + rand() % 5)], (0 + rand() % 40));
 			++gaming;
-			StudentList[i]->displayInfo();
+			// uncomment to debug
+			//StudentList[i]->displayInfo();
 		}
 	}
 	Survey survey(StudentList, userInput, gaming, nonGamaing);
-	//system("CLS");
+	system("CLS");
 	survey.displayInfo();
 }
