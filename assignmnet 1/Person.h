@@ -20,8 +20,4 @@ public:
 	virtual int getAge() = 0;
 	virtual string getService() = 0;
 	virtual float getHours() = 0;
-	void test()
-	{
-
-	}
 };

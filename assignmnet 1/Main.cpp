@@ -14,11 +14,16 @@ int main()
 	string programArr[10] = { "Game Programming","Computer Science", "Photography", "Music Industry Arts", "Marine Technology", "Baking and Pastry Arts", "Culinary Management", "Culinary Skills", "Animal Care", "Journalism" };
 	string streamingArr[4] = { "Netflix","Hulu", "HBO","Disney Plus"};
 	string deviceArr[5] = { "Xbox","PS4", "Switch", "PC", "Mobile"};
-	int userInput;
+	int userInput= 0;
 	int nonGamaing = 0;
 	int gaming = 0;
-	cout << "Enter the amout of Students: ";
-	cin >> userInput;
+	cout << "Enter the amout of Students (max 500): ";
+	
+	do
+	{
+		cin >> userInput;
+	} while ((userInput > 500));
+
 	Person** StudentList = new Person*[userInput];
 	srand((unsigned)time(NULL));
 	for (int i = 0; i < userInput; i++)
@@ -41,4 +46,5 @@ int main()
 	Survey survey(StudentList, userInput, gaming, nonGamaing);
 	system("CLS");
 	survey.displayInfo();
+	return 0;
 }
