@@ -17,13 +17,11 @@ int main()
 	int userInput= 0;
 	int nonGamaing = 0;
 	int gaming = 0;
-	cout << "Enter the amout of Students (max 500): ";
-	
 	do
 	{
+		cout << "Enter the amout of Students (max 500): ";
 		cin >> userInput;
 	} while ((userInput > 500));
-
 	Person** StudentList = new Person*[userInput];
 	srand((unsigned)time(NULL));
 	for (int i = 0; i < userInput; i++)
